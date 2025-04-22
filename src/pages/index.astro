@@ -1,11 +1,19 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Hero from "@components/Hero.astro";
+import Camera from "@components/Camera.astro";
+import Layout from "@layouts/Layout.astro";
+import { LiveWindForecast } from "@components/LiveWindForecast";
+import WindGuru from "@components/WindGuru.astro";
+import Footer from "@components/Footer.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <div class="flex flex-col gap-16">
+    <div class="pt-24"></div>
+    <Hero />
+    <LiveWindForecast client:visible />
+    <WindGuru />
+    <Camera />
+  </div>
+  <Footer />
 </Layout>

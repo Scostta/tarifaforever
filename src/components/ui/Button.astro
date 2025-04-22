@@ -1,0 +1,22 @@
+---
+import { cn } from "tiny-cn";
+
+interface Props {
+  onClick: astroHTML.JSX.ButtonHTMLAttributes["onclick"];
+  className?: string;
+}
+
+const { onClick, className } = Astro.props;
+---
+
+<button
+  class={cn(
+    className,
+    "py-4 px-6 bg-primary rounded-4xl text-primary-foreground cursor-pointer",
+    "hover:bg-hover",
+    "transition duration-250 ease-in-out",
+  )}
+  onclick={onClick}
+>
+  <slot />
+</button>

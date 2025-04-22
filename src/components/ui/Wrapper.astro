@@ -1,0 +1,35 @@
+---
+import type { JSX } from "astro/jsx-runtime";
+import { cn } from "tiny-cn";
+
+interface Props {
+  type?: "none" | "sm" | "md";
+  id: string;
+  className?: string;
+  children?: JSX.Element | string;
+}
+
+const { type = "sm", id, className } = Astro.props;
+
+const SIZES = {
+  none: {
+    MOBILE: "px-0",
+    DESKTOP: "lg:px-0",
+  },
+  sm: {
+    MOBILE: "px-2",
+    DESKTOP: "lg:px-24",
+  },
+  md: {
+    MOBILE: "px-4",
+    DESKTOP: "lg:px-48",
+  },
+};
+
+const marginMobile = SIZES[type].MOBILE;
+const marginDesktop = SIZES[type].DESKTOP;
+---
+
+<div id={id} class={cn(className, marginMobile, marginDesktop)}>
+  <slot />
+</div>

@@ -1,0 +1,30 @@
+<script id="wg_fwdg_43_100_1744201564791">
+  (function (window, document) {
+    var loader = function () {
+      var arg = [
+        "s=43",
+        "m=100",
+        "uid=wg_fwdg_43_100_1744201564791",
+        "wj=knots",
+        "tj=c",
+        "waj=m",
+        "tij=cm",
+        "odh=0",
+        "doh=24",
+        "fhours=240",
+        "hrsm=2",
+        "vt=forecasts",
+        "lng=es",
+        "idbs=1",
+        "p=WINDSPD,GUST,SMER,TMPE,FLHGT,CDC,APCP1s,RATING",
+      ];
+      var script = document.createElement("script");
+      var tag = document.getElementsByTagName("script")[0];
+      script.src = "https://www.windguru.cz/js/widget.php?" + arg.join("&");
+      tag.parentNode.insertBefore(script, tag);
+    };
+    window.addEventListener
+      ? window.addEventListener("load", loader, false)
+      : window.attachEvent("onload", loader);
+  })(window, document);
+</script>

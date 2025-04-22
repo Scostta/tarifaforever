@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* COLORS */
+  --color-background: var(--background);
+  --color-card-primary: var(--card-primary);
+  --color-card-primary-foreground: var(--card-primary-foreground);
+  --color-card-secondary: var(--card-secondary);
+  --color-card-secondary-foreground: var(--card-secondary-foreground);
+  --color-hover: var(--hover);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+}
+
+[data-theme='default-light'] {
+  --background: #F3EcEE;
+  --card-primary: #FFFFFF;
+  --card-primary-foreground: #000000;
+  --card-secondary: #F3EcEE;
+  --card-secondary-foreground: #BDB395;
+  --hover: #A29A80;
+  --primary: #BDB395;
+  --primary-foreground: #FFFFFF;
+  --secondary: #D6C6A3;
+  --accent: #F2E2B0;
+}
+
+[data-theme='default-dark'] {
+  --background: #F3EcEE;
+  --card-primary: #FFFFFF;
+  --card-primary-foreground: #000000;
+  --card-secondary: #F3EcEE;
+  --card-secondary-foreground: #BDB395;
+  --hover: #A29A80;
+  --primary: #BDB395;
+  --primary-foreground: #FFFFFF;
+  --secondary: #D6C6A3;
+  --accent: #F2E2B0;
+}
+
+@layer components {
+  .title {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary);
+  }
+
+  .card-primary {
+    background-color: var(--card-primary);
+    color: var(--card-primary-foreground);
+    padding: 24px 48px;
+    border-radius: var(--radius-2xl);
+  }
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background);
+}
