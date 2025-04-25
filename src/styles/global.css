@@ -19,26 +19,26 @@
 }
 
 [data-theme='default-light'] {
-  --background: #F3EcEE;
-  --card-primary: #FFFFFF;
+  --background: #FFFFFF;
+  --card-primary: #F4F4F4;
   --card-primary-foreground: #000000;
   --card-secondary: #F3EcEE;
   --card-secondary-foreground: #BDB395;
   --hover: #A29A80;
-  --primary: #BDB395;
+  --primary: #000000;
   --primary-foreground: #FFFFFF;
   --secondary: #D6C6A3;
   --accent: #F2E2B0;
 }
 
 [data-theme='default-dark'] {
-  --background: #F3EcEE;
-  --card-primary: #FFFFFF;
-  --card-primary-foreground: #000000;
-  --card-secondary: #F3EcEE;
-  --card-secondary-foreground: #BDB395;
+  --background: #1C1C1C;
+  --card-primary: #232323;
+  --card-primary-foreground: #FFFFFF;
+  --card-secondary: #232323;
+  --card-secondary-foreground: #FFFFFF;
   --hover: #A29A80;
-  --primary: #BDB395;
+  --primary: #DBB66B;
   --primary-foreground: #FFFFFF;
   --secondary: #D6C6A3;
   --accent: #F2E2B0;
@@ -46,7 +46,7 @@
 
 @layer components {
   .title {
-    font-size: var(--text-4xl);
+    font-size: var(--text-2xl);
     font-weight: var(--font-weight-bold);
     color: var(--primary);
   }
@@ -65,4 +65,5 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--color-background);
+  scroll-behavior: smooth;
 }

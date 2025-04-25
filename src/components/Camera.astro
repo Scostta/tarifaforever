@@ -1,9 +1,10 @@
 ---
 import Wrapper from "@components/ui/Wrapper.astro";
+import { APP_SECTIONS } from "src/constants";
 ---
 
-<Wrapper id="camera" className="flex flex-col gap-8">
-  <div class="title">Camara</div>
+<Wrapper id={APP_SECTIONS.CAMERA} className="flex flex-col gap-8">
+  <!-- <div class="title">Camara</div> -->
   <div class="relative w-100% h-0 pb-[56.25%]">
     <iframe
       width="800"
