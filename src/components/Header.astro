@@ -2,17 +2,18 @@
 import { APP_LINKS } from "src/constants";
 import logo from "../assets/logo.png";
 import Wrapper from "./ui/Wrapper.astro";
+import Navigation from "./ui/Navigation.astro";
 ---
 
 <div class="header">
   <Wrapper id="header">
-    <div class="flex justify-between items-center py-2">
+    <div class="flex justify-between items-center py-2 relative">
       <img
         src={logo.src}
         alt="React Router"
-        class="block w-[80%] h-[80%] lg:w-[60px] lg:h-[60px] self-center"
+        class="block w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] self-center"
       />
-      <div>
+      <div class="hidden lg:block">
         {
           APP_LINKS.map(({ href, text }) => (
             <a
@@ -24,6 +25,7 @@ import Wrapper from "./ui/Wrapper.astro";
           ))
         }
       </div>
+      <Navigation className="block lghidden" links={APP_LINKS} />
     </div>
   </Wrapper>
 </div>
